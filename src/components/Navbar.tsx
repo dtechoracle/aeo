@@ -39,7 +39,11 @@ const Navbar = () => {
     } else {
       document.body.style.overflow = "auto";
     }
-    return () => (document.body.style.overflow = "auto");
+    
+    // Cleanup function
+    return () => {
+      document.body.style.overflow = "auto";
+    };
   }, [isOpen]);
 
   return (
